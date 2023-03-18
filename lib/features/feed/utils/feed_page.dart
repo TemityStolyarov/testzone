@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:testzone/features/feed/utils/widgets.dart';
+import 'package:testzone/features/feed/widgets/test_card.dart';
 import 'package:testzone/features/settings/color_schemes.dart';
 
 class FeedPage extends StatelessWidget {
