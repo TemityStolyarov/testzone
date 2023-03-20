@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:testzone/features/feed/utils/feed_page.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'features/auth/account_screen.dart';
+import 'features/auth/home_screen.dart';
+import 'features/auth/login_screen.dart';
+import 'features/auth/reset_password_screen.dart';
+import 'features/auth/signup_screen.dart';
+import 'features/auth/utils/firebase_stream.dart';
+import 'features/auth/verify_email_screen.dart';
 import 'firebase_options.dart';
 
 // Future for Auth
 Future<void> main() async {
 // Ensure that app has beed started
   WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp(
-  //     options: DefaultFirebaseOptions.currentPlatform,
-  //     );
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
-
-//   await Firebase.initializeApp(
-//     options: DefaultFirebaseOptions.currentPlatform,
-// );
 }
 
 class MyApp extends StatelessWidget {
@@ -31,9 +34,14 @@ class MyApp extends StatelessWidget {
         ),
       ),
       routes: {
-        '/': (context) =>
-            const FeedPage(title: 'Главная') //const FirebaseStream()
-        //'/home':(context) => const
+        //const FeedPage(title: 'Главная'),
+        '/': (context) => const FirebaseStream(),
+        '/home': (context) => const FeedPage(title: 'Главная'),
+        '/account': (context) => const AccountScreen(),
+        '/login': (context) => const LoginScreen(),
+        '/signup': (context) => const SignUpScreen(),
+        '/reset_password': (context) => const ResetPasswordScreen(),
+        '/verify_email': (context) => const VerifyEmailScreen(),
       },
       initialRoute: '/',
     );

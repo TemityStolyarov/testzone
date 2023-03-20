@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../settings/constants.dart';
+
 class TestCardStats extends StatelessWidget {
   const TestCardStats({super.key});
 
@@ -8,8 +10,8 @@ class TestCardStats extends StatelessWidget {
     return Row(
       children: const [
         Text(
+          style: TextStyle(fontSize: TestZoneConst.titleFontSize),
           '4.8',
-          textScaleFactor: 1.1,
         ),
         Icon(
           Icons.star_border_outlined,
@@ -19,8 +21,8 @@ class TestCardStats extends StatelessWidget {
           width: 8,
         ),
         Text(
+          style: TextStyle(fontSize: TestZoneConst.titleFontSize),
           '3.6k',
-          textScaleFactor: 1.1,
         ),
         Icon(
           Icons.check,
@@ -28,8 +30,8 @@ class TestCardStats extends StatelessWidget {
         ),
         Spacer(),
         Text(
+          style: TextStyle(fontSize: TestZoneConst.smallFontSize),
           '@username',
-          textScaleFactor: 0.8,
         ),
       ],
     );
