@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import '../feed/widgets/test_card.dart';
 import 'account_screen.dart';
 import 'login_screen.dart';
 
@@ -32,8 +33,7 @@ class HomeScreen extends StatelessWidget {
               }
             },
             icon: Icon(
-              Icons.person,
-              color: (user == null) ? Colors.white : Colors.yellow,
+              (user == null) ? Icons.person_outline : Icons.person,
             ),
           ),
         ],
@@ -41,8 +41,26 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: (user == null)
-              ? const Text('Контент для НЕ зарегистрированных в системе')
-              : const Text('Контент для ЗАРЕГИСТРИРОВАННЫХ в системе'),
+              ? Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: const [
+                    TestCard(),
+                    SizedBox(height: 3),
+                    TestCard(),
+                    SizedBox(height: 3),
+                    Text('2 теста'),
+                  ],
+                )
+              : Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: const [
+                    TestCard(),
+                    SizedBox(height: 3),
+                    TestCard(),
+                    SizedBox(height: 3),
+                    Text('2 теста'),
+                  ],
+                ),
         ),
       ),
     );

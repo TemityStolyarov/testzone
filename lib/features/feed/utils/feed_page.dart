@@ -18,7 +18,9 @@ class FeedPage extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         children: const [
           TestCard(),
+          SizedBox(height: 3),
           TestCard(),
+          SizedBox(height: 3),
           Text('2 теста'),
         ],
       ),
