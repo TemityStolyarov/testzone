@@ -19,6 +19,7 @@ class FeedPage extends StatelessWidget {
         children: const [
           TestCard(),
           TestCard(),
+          Text('2 теста'),
         ],
       ),
     );
