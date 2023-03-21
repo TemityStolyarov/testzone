@@ -5,7 +5,18 @@ import 'package:testzone/features/settings/color_schemes.dart';
 import '../../settings/constants.dart';
 
 class TestCard extends StatelessWidget {
-  const TestCard({super.key});
+  TestCard({
+    testTitle,
+    testDescription,
+    super.key,
+  });
+
+  String testTitle =
+      'Каким животным ты бы хотел быть?'; // TODO: clear default value
+  String testDescription =
+      'Продолжая тему обсуждения, связанную с предшественниками человека, каждое живое существо хотя бы однажды хотело бы относиться к другому виду. А к кому относите себя вы?';
+  // TODO: clear default value
+  final DateTime testPublishTime = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
@@ -25,22 +36,19 @@ class TestCard extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 Text(
-                  'Каким животным ты бы хотел быть?',
+                  testTitle,
                   style: TextStyle(fontSize: TestZoneConst.titleFontSize),
-                  // textScaleFactor: 1.1,
                 ),
                 SizedBox(height: 2),
                 Text(
-                  '11 мая 2023, в 11:02',
+                  // '11 мая 2023, в 11:02'
+                  '${testPublishTime.day} ${testPublishTime.month} ${testPublishTime.year}, в ${testPublishTime.hour}:${testPublishTime.minute}',
                   style: TextStyle(fontSize: TestZoneConst.smallFontSize),
                 ),
                 SizedBox(height: 4),
-                Text(
-                  'Продолжая тему обсуждения, связанную с предшественниками человека, каждое живое существо хотя бы однажды хотело бы относиться к другому виду. А к кому относите себя вы?', //
-                  //'
-                ),
+                Text(testDescription),
                 SizedBox(height: 12),
                 TestCardStats(),
               ],

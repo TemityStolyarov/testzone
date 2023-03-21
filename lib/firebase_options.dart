@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '580950946660',
     projectId: 'testzoneauth',
     storageBucket: 'testzoneauth.appspot.com',
-    iosClientId: '580950946660-grr3a22cor15m4cdf6f3t247u3j931nl.apps.googleusercontent.com',
+    iosClientId:
+        '580950946660-grr3a22cor15m4cdf6f3t247u3j931nl.apps.googleusercontent.com',
     iosBundleId: 'com.example.testzone',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '580950946660',
     projectId: 'testzoneauth',
     storageBucket: 'testzoneauth.appspot.com',
-    iosClientId: '580950946660-grr3a22cor15m4cdf6f3t247u3j931nl.apps.googleusercontent.com',
+    iosClientId:
+        '580950946660-grr3a22cor15m4cdf6f3t247u3j931nl.apps.googleusercontent.com',
     iosBundleId: 'com.example.testzone',
   );
 }

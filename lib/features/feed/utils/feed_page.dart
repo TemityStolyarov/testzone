@@ -16,10 +16,10 @@ class FeedPage extends StatelessWidget {
       ),
       body: Column(
         mainAxisSize: MainAxisSize.max,
-        children: const [
-          TestCard(),
+        children: [
+          //TestCard(),
           SizedBox(height: 3),
-          TestCard(),
+          //TestCard(),
           SizedBox(height: 3),
           Text('2 теста'),
         ],

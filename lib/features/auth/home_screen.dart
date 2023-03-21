@@ -43,8 +43,12 @@ class HomeScreen extends StatelessWidget {
           child: (user == null)
               ? Column(
                   mainAxisSize: MainAxisSize.max,
-                  children: const [
-                    TestCard(),
+                  children: [
+                    TestCard(
+                      testTitle: "Могут ли коты летать?",
+                      testDescription:
+                          "Многие годы люди задавались вопросом: а сможет ли их пушистик, подобно фее, взлететь к небу? Ковер-самолет на восток унесет результат Вашего теста!",
+                    ),
                     SizedBox(height: 3),
                     TestCard(),
                     SizedBox(height: 3),
@@ -53,11 +57,15 @@ class HomeScreen extends StatelessWidget {
                 )
               : Column(
                   mainAxisSize: MainAxisSize.max,
-                  children: const [
+                  children: [
                     TestCard(),
                     SizedBox(height: 3),
-                    TestCard(),
-                    SizedBox(height: 3),
+                    TestCard(
+                      testTitle: "Могут ли коты летать?",
+                      testDescription:
+                          "Многие годы люди задавались вопросом: а сможет ли их пушистик, подобно фее, взлететь к небу? Ковер-самолет на восток унесет результат Вашего теста!",
+                    ),
+                    SizedBox(height: 5),
                     Text('2 теста'),
                   ],
                 ),

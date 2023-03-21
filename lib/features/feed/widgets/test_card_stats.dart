@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
-
 import '../../settings/constants.dart';
 
 class TestCardStats extends StatelessWidget {
-  const TestCardStats({super.key});
+  TestCardStats({
+    testRating,
+    testTimesPassed,
+    testAuthorUsername,
+    super.key,
+  });
+
+  double testRating = 4.8; // TODO: clear default value
+  double testTimesPassed = 3.6; // TODO: clear default value
+  final String testAuthorUsername = 'username'; // TODO: clear default value
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: const [
+      children: [
         Text(
           style: TextStyle(fontSize: TestZoneConst.titleFontSize),
-          '4.8',
+          testRating.toString(),
         ),
         Icon(
           Icons.star_border_outlined,
@@ -22,7 +30,7 @@ class TestCardStats extends StatelessWidget {
         ),
         Text(
           style: TextStyle(fontSize: TestZoneConst.titleFontSize),
-          '3.6k',
+          '${testTimesPassed}k',
         ),
         Icon(
           Icons.check,
@@ -31,7 +39,7 @@ class TestCardStats extends StatelessWidget {
         Spacer(),
         Text(
           style: TextStyle(fontSize: TestZoneConst.smallFontSize),
-          '@username',
+          '@$testAuthorUsername',
         ),
       ],
     );
