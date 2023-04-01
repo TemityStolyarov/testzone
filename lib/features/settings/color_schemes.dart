@@ -5,6 +5,6 @@ class AppColorScheme {
   static const Color feedSplashColor = Color.fromRGBO(50, 50, 50, 0.3);
   static const Color feedTestCardColor = Color.fromRGBO(255, 255, 255, 1);
   static const Color feedBackgroundColor = Color.fromRGBO(236, 239, 241, 1);
-  static const Color errorColor = Colors.red;
-  static const Color okColor = Colors.green;
+  static const Color negative = Colors.red;
+  static const Color positive = Colors.green;
 }

@@ -12,7 +12,7 @@ class CustomSnackBar {
     final snackBar = SnackBar(
       content: Text(message),
       backgroundColor:
-          error ? AppColorScheme.errorColor : AppColorScheme.okColor,
+          error ? AppColorScheme.negative : AppColorScheme.positive,
     );
 
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
